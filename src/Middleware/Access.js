@@ -12,7 +12,8 @@ export const RespondLog = (req, res, next) => {
 
     // Mengganti res.send agar bisa mencetak body sebelum mengirimkannya
     res.send = function(body) {
-        console.log(`Response - ${body}`);
+        console.log(`Respond made from ${process.env.APP_HOST}:${process.env.PORT}`);
+        // console.log(`Sending Request - ${body}`);
         // Memanggil fungsi asli res.send dengan body yang sama
         originalSend.call(this, body);
     };
@@ -20,14 +21,14 @@ export const RespondLog = (req, res, next) => {
     // Periksa juga res.json dan res.end untuk jenis respons lain
     const originalJson = res.json;
     res.json = function(body) {
-        console.log(`Response JSON - ${JSON.stringify(body)}`);
+        console.log(`Processing Respond from ${process.env.APP_HOST}:${process.env.PORT}`);
         originalJson.call(this, body);
     };
 
     const originalEnd = res.end;
     res.end = function(body) {
         if (body) {
-            console.log(`Response End - ${body}`);
+            console.log(`Respond Served`);
         }
         originalEnd.call(this, body);
     };

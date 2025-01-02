@@ -13,6 +13,18 @@ export default (sequelize) => {
                 allowNull: false,
                 unique: true,
             },
+            google_id: {
+                type: String
+            },
+            picture: {
+                type: String
+            },
+            createdAt: {
+                type: Date, default: Date.now
+            },
+            updatedAt: {
+                type: Date, default: Date.now
+            }
         },
         {
             tableName: 'users',

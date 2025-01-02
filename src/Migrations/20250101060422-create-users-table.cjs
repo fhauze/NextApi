@@ -16,6 +16,10 @@ module.exports = {
               primaryKey: true,
               allowNull: false,
           },
+          google_id: {
+            type: Sequelize.STRING,
+            allowNull: true,
+          },
           name: {
               type: Sequelize.STRING,
               allowNull: false,
@@ -25,12 +29,21 @@ module.exports = {
               allowNull: false,
               unique: true,
           },
+          picture: {
+            type: Sequelize.STRING,
+            allowNull: true,
+          },
+          password:{
+            type:Sequelize.STRING,
+            allowNull: true,
+          }
+          ,
           createdAt: {
-              allowNull: false,
+              allowNull: true,
               type: Sequelize.DATE,
           },
           updatedAt: {
-              allowNull: false,
+              allowNull: true,
               type: Sequelize.DATE,
           },
       });
@@ -43,5 +56,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
+    await queryInterface.dropTable('users');
   }
 };
