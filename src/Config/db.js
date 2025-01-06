@@ -11,7 +11,10 @@ const sequelize = new Sequelize(
         host: process.env.DB_HOST,
         dialect: 'postgres', // Dialek database
         port: process.env.DB_PORT || 5432, // Port default PostgreSQL
-        logging: false, // Nonaktifkan logging jika tidak diperlukan
+        logging: false, 
+        define: {
+            schema: 'public',
+        },
     }
 );
 
