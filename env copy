@@ -1,0 +1,26 @@
+#For App
+PORT=3001
+APP_HOST=localhost
+
+#Database
+DB=EXPRESS_API
+DB_HOST=localhost
+DB_USER=ubuntu
+DB_PASSWORD=asalada123
+PORT=3001
+DB_DIALECT=postgres
+
+#Auth
+
+# Packages
+# sequelize-cli
+# "dotenv": "^16.4.7",
+# "express": "^4.21.2",
+# "nodemon": "^3.1.9",
+# "swagger-jsdoc": "^6.2.8",
+# "swagger-ui-express": "^5.0.1"
+# "devDependencies": {
+#    "sequelize-cli": "^6.6.2"
+#  }
+
+#npm install pg pg-hstore

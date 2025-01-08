@@ -6,7 +6,7 @@ export default (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'warehouses',
+        model: 'Warehouse',
         key: 'id',
       },
     },
@@ -14,7 +14,7 @@ export default (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'products',
+        model: 'Product',
         key: 'id',
       },
     },
@@ -38,7 +38,7 @@ export default (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: true, // Adjust if this field is required
       references: {
-        model: 'warehouses',
+        model: 'warehouse',
         key: 'id',
       },
     },

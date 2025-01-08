@@ -39,13 +39,15 @@ module.exports = {
           }
           ,
           createdAt: {
-              allowNull: true,
-              type: Sequelize.DATE,
+            type: Sequelize.DATE,
+            allowNull: false,
+            defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
           },
           updatedAt: {
-              allowNull: true,
-              type: Sequelize.DATE,
-          },
+            type: Sequelize.DATE,
+            allowNull: false,
+            defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+          }
       });
   },
 
