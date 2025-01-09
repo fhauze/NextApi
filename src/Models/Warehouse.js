@@ -15,8 +15,8 @@ export default (sequelize) => {
     }, {
       tableName: 'warehouses',
       timestamps: true,
-      createdAt: 'created_at',
-      updatedAt: 'updated_at',
+      createdAt: 'createdAt',
+      updatedAt: 'updatedAt',
     });
   
     Warehouse.associate = (models) => {

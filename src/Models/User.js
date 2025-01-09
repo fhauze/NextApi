@@ -18,11 +18,18 @@ export default (sequelize) => {
         type: DataTypes.BOOLEAN,
         defaultValue: false,
       },
+      role_id: {
+        type: DataTypes.INTEGER,
+        refrences:{
+          model: 'Role',
+          field: 'id'
+        }
+      },
     }, {
-      tableName: 'users',
+      tableName: 'Users',
       timestamps: true,
-      createdAt: 'created_at',
-      updatedAt: 'updated_at',
+      createdAt: 'createdAt',
+      updatedAt: 'updatedAt',
     });
   
     User.associate = (models) => {

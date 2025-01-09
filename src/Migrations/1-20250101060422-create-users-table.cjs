@@ -29,6 +29,10 @@ module.exports = {
               allowNull: false,
               unique: true,
           },
+          email_verified:{
+            type: DataTypes.BOOLEAN,
+            defaultValue: false,
+          },
           picture: {
             type: Sequelize.STRING,
             allowNull: true,
@@ -36,8 +40,14 @@ module.exports = {
           password:{
             type:Sequelize.STRING,
             allowNull: true,
-          }
-          ,
+          },
+          ole_id: {
+              type: DataTypes.INTEGER,
+              refrences:{
+                model: 'Role',
+                field: 'id'
+              }
+          },
           createdAt: {
             type: Sequelize.DATE,
             allowNull: false,

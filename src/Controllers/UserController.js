@@ -4,7 +4,10 @@ class UserController{
     static async getUsers(req, res) {
         try {
             const users = await models.User.findAll();
-            res.status(200).json(users);
+            if(users.length > 0){
+                res.status(200).json(users);
+            }
+            return res.status(200).json({message:'Data kosong'});
         } catch (error) {
             res.status(500).json({ error: error.message });
         }

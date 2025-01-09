@@ -1,7 +1,8 @@
-import { DataTypes } from 'sequelize';
-import sequelize from '../database/connection'; // adjust based on your project structure
+import { DataTypes, Sequelize } from 'sequelize';
+import sequelize from './../Config/db.js';
 
-const Cart = sequelize.define('Cart', {
+class Cart extends Sequelize.Model{};
+Cart.init({
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -45,9 +46,10 @@ const Cart = sequelize.define('Cart', {
     allowNull: true,
   },
 }, {
+  sequelize,
   tableName: 'Carts',
-  createdAt: 'created_at',
-  updatedAt: 'updated_at',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
   timestamps: true, // Enable automatic timestamp fields
   paranoid: true, // Enable soft delete (deletedAt field)
 });

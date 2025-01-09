@@ -6,6 +6,7 @@ import Transaction from './Transaction.js';
 import User from './User.js';
 import UserProfile from './UserProfile.js';
 import Warehouse from './Warehouse.js';
+import Cart from './Cart.js';
 
 // Inisialisasi model
 const models = {
@@ -16,6 +17,7 @@ const models = {
     Inventory: Inventory(sequelize,sequelize.DataTypes),
     Transaction: Transaction(sequelize, sequelize.DataTypes),
     Warehouse: Warehouse(sequelize, sequelize.DataTypes),
+    Cart,
 };
 
 // Jika ada relasi antar model, definisikan di sini

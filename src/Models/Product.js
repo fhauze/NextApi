@@ -21,8 +21,8 @@ export default (sequelize) => {
     }, {
       tableName: 'products',
       timestamps: true,
-      createdAt: 'created_at',
-      updatedAt: 'updated_at',
+      createdAt: 'createdAt',
+      updatedAt: 'updatedAt',
     });
   
     Product.associate = (models) => {

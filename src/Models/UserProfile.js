@@ -25,8 +25,8 @@ export default (sequelize) => {
     }, {
       tableName: 'user_profiles',
       timestamps: true,
-      createdAt: 'created_at',
-      updatedAt: 'updated_at',
+      createdAt: 'createdAt',
+      updatedAt: 'updatedAt',
     });
   
     UserProfile.associate = (models) => {
