@@ -18,5 +18,13 @@ const sequelize = new Sequelize(
     }
 );
 
+sequelize.lockTransaction = async (transaction, model, id) => {
+    // Using FOR UPDATE to lock the row for updates
+    return await model.findOne({
+      where: { id },
+      lock: transaction.LOCK.UPDATE, // Lock the row for the transaction
+      transaction,
+    });
+  };
 
 export default sequelize;

@@ -2,7 +2,7 @@ import  sequelize  from '../Config/db.js';
 import Inventory from './Inventory.js';
 import Product from './Product.js';
 import Role from './Role.js';
-import Transaction from './Transaction,js';
+import Transaction from './Transaction.js';
 import User from './User.js';
 import UserProfile from './UserProfile.js';
 import Warehouse from './Warehouse.js';
